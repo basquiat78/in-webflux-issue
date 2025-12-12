@@ -1,7 +1,7 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.5.8'
-	id 'io.spring.dependency-management' version '1.1.7'
+    id 'java'
+    id 'org.springframework.boot' version '3.5.8'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'io.basquiat'
@@ -9,37 +9,37 @@ version = '0.0.1-SNAPSHOT'
 description = 'webflux issue test case for Spring Boot'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	// webflux initializer
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+    // webflux initializer
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
 
-	// r2dbc setting
-	runtimeOnly 'org.postgresql:r2dbc-postgresql:1.1.1.RELEASE'
-	implementation 'io.r2dbc:r2dbc-proxy'
+    // r2dbc setting
+    runtimeOnly 'org.postgresql:r2dbc-postgresql:1.1.1.RELEASE'
+    implementation 'io.r2dbc:r2dbc-proxy'
 
-	// blcokhound
-	implementation 'io.projectreactor.tools:blockhound:1.0.8.RELEASE'
+    // blcokhound
+    implementation 'io.projectreactor.tools:blockhound:1.0.8.RELEASE'
 
-	testImplementation 'io.projectreactor:reactor-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webflux-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-data-r2dbc-test'
+    testImplementation 'io.projectreactor:reactor-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webflux-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-r2dbc-test'
 
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }

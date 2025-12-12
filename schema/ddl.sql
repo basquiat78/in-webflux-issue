@@ -1,3 +1,4 @@
-CREATE table basquiat."member" (
-	uid varchar(20) NULL
+CREATE TABLE basquiat."member"
+(
+    uid varchar(20) PRIMARY KEY
 );

@@ -26,6 +26,6 @@ logging:
     root: INFO
     org.springframework.r2dbc: DEBUG
     # Pool 관련 로그 확인용
-    io.r2dbc.pool: DEBUG
-    io.r2dbc.postgresql.QUERY: DEBUG
-    io.r2dbc.postgresql.PARAM: DEBUG
+    #io.r2dbc.pool: DEBUG
+    #io.r2dbc.postgresql.QUERY: DEBUG
+    #io.r2dbc.postgresql.PARAM: DEBUG
