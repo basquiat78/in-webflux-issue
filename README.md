@@ -1,5 +1,14 @@
 # Drain & Burst Test
 
+# 테스트 환경
+
+```aiignore
+Language: Java21
+DB: PostgreSQL 14.18
+IDE: Intellij
+OS: Apple M2 Sequoia 15.6.1
+```
+
 # 기본적인 구성
 
 `Member`라는 객체 하나만 가지고 기본적인 `CRUD`를 생성해 심플하게 테스트를 진행해 볼려고 한다.
